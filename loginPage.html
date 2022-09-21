@@ -5,8 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loginPage</title>
+    <style>
+       div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 25%;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px 30px;
+       }
+       body{
+        background-color: #6f61bd;
+       }
+       button{
+        width: 100%;
+        margin-top: 25px;
+        background-color:#715ebb ;
+        color: white;
+        padding: 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+
+       }
+       button:hover{
+        background-color: #62589c;
+       }
+       #email{
+        border: none;
+        margin-top: 40px;
+        padding: 15px;
+        width: 100%;
+        font-size: 20px;
+       }
+     #password{
+        border: none;
+        margin-top: 40px;
+        padding: 15px;  
+        width: 100%;
+        font-size: 20px;
+     }
+          p{
+        margin-top: 50px;
+        font-family: sans-serif;
+     }
+     p+p{
+        font-family: sans-serif;
+        margin-top: 10px;
+
+     }
+    </style>
 </head>
 <body>
-    <h1>I will do later</h1>
+    <div>
+       <form action="">
+        <h1>Login</h1>
+        <input type="email" name="" id="email" placeholder="Email">
+        <hr>
+        <input type="password" name="" id="password" placeholder="Password">
+        <br>
+        <hr>
+        <button aria-placeholder="Login">Login</button>
+        <p>Forgot <a href="">Password?</a></p>
+        <p>Don't have an account?<a href="">Sign up</a></p>
+       </form>
+    </div>
 </body>
 </html>

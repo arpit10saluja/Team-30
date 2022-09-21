@@ -5,8 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+        div{
+            width: 30%;
+            height: auto;
+            border: 0px solid red;
+            margin: auto;
+           background-color: rgb(141, 141, 207);
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           padding: 10px;
+        }
+        h3{
+            font-size: 30px;
+            text-align: center;
+        }
+        #form{
+            width: 100%;
+            height: auto;
+           background-color: aqua;
+        }
+        label{
+            font-size: large;
+            margin-top: 30px ;
+            padding: 10px;
+        }
+        input{
+            background-color: bisque;
+            width: 99%;
+           font-size: large;
+           border-radius: 10px;
+           
+        }
+        #pass ~ input{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+    <h1>masai</h1>
+   <div>
+    <h3>Sign Up</h3>
+    <form id="form" action="">     
+        <label>Full Name</label>
+        <br>
+        <input id="name" type="text" placeholder="ENTER FULL NAME"><br>
+        <label>Email</label><br>
+        
+        <input id="mail" type="email" placeholder="ENTER EMAIL"><br>
+        <label>Password</label><br>
+        
+        <input id="pass" type="password" placeholder="ENTER PASSWORD">
+        <br>
+        <input type="submit" value="SIGN UP">
+    </form>
     
+   </div>
 </body>
 </html>
+<script>
+     document.querySelector('form').addEventListener("submit", signup);
+
+function signup(event){
+    event.preventDefault();
+
+let  name = document.querySelector('#name').value;
+let  mail = document.querySelector('#mail').value;
+let  pass = document.querySelector('#pass').value;
+
+if(name==""||mail==""||pass==""){
+    alert("fill the form completely");
+}
+else{
+    localStorage.setItem("full_name", name)
+    localStorage.setItem("email", mail)
+    localStorage.setItem("password", pass)
+    alert("Sign up successful, please login")
+    let login=document.createElement("a")
+    login.innerText="Login"
+    login.href="file:///C:/Users/User/Desktop/Masaai%20Repo/lokesh_gola_fw21_0703/unit-2/sprint-4/day-1/you/Sign-up%20and%20Login/login/index.html"
+
+    document.querySelector("form").append(login)
+}
+}
+
+</script>
